@@ -1,0 +1,20 @@
+﻿@model IEnumerable<MvcCorePersonajesSeriesApi.Models.Serie>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<ul class="list-group">
+    @foreach (Serie serie in Model)
+    {
+        <li class="list-group-item"><a asp-controller="Series" asp-action="DetailsSerie" asp-route-idserie="@serie.IdSerie">@serie.Nombre</a></li>
+         
+    }
+</ul>
+

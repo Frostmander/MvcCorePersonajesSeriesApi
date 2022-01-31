@@ -1,0 +1,9 @@
+﻿@model Serie
+
+<div>
+    <img src="@Model.Imagen" />
+    <h1>@Model.Nombre</h1>
+    <p>Puntuación: @Model.Puntuacion</p>
+    <a class="btn btn-info" asp-controller="Series" asp-action="PersonajesSerie" asp-route-idserie="@Model.IdSerie">Personajes</a>
+
+</div>

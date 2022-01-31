@@ -1,0 +1,21 @@
+﻿@model List<Serie>
+
+<h1>Cambiar personaje de serie</h1>
+
+<form method="post">
+    <label>Selecciona personaje</label>
+    <select name="idpersonaje" class="form-control">
+        @foreach (Personaje perso in ViewBag.personajes)
+        {
+            <option value="@perso.IdPersonaje">@perso.Nombre</option>
+        }
+    </select>
+    <label>Selecciona la nueva serie</label>
+    <select name="idserie" class="form-control">
+        @foreach(Serie serie in Model)
+        {
+            <option value="@serie.IdSerie">@serie.Nombre</option>
+        }
+    </select>
+    <button type="submit" class="btn btn-dark">Cambiar personaje</button>
+</form>
